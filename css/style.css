@@ -21,14 +21,12 @@ div.big-container {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: 500px;
-  min-width: 1000px;
+  min-width: 800px;
   background: linear-gradient(to top, #DADBD3 85%, #009688 15%);
   background-repeat: no-repeat;
 }
 main.container {
-  width: 90vw;
-  height: 90vh;
-  min-width: 1000px;
-  min-height: 500px;
+  width: 80vw;
+  height: 96vh;
+  min-width: 800px;
 }
