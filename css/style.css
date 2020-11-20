@@ -40,7 +40,8 @@ section.col-left section.user {
   background-color: #EAEAEA;
 }
 section.col-left section.notifications {
-  height: 90px;
+  display: flex;
+  flex-direction: row;
   background-color: #8ED9FC;
 }
 section.col-left section.search {
@@ -52,11 +53,11 @@ section.col-left section.contacts {
   background-color: #FFFFFF;
 }
 /* COL-RIGHT -> ROWS */
-section.col-right section.corrent-contact {
+section.col-right section.current-contact {
   height: 70px;
   background-color: #EAEAEA;
 }
-section.col-right section.corrent-chat {
+section.col-right section.current-chat {
   height: calc(96vh - 140px);
   background-image: url("../img/mine.jpg");
 }
@@ -64,6 +65,37 @@ section.col-right section.writing {
   display: flex;
   flex-direction: row;
   background-color: #F3EEE9;
+}
+/* COL-LEFT -> ROWS -> NOTIFICATIONS */
+section.col-left section.notifications div.left, section.col-left section.notifications div.right {
+  display: flex;
+  height: 90px;
+}
+section.col-left section.notifications div.left {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+section.col-left section.notifications div.right {
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+section.col-left section.notifications div.left i {
+  font-size: 30px;
+  line-height: 40px;
+  border-radius: 50%;
+  padding: 15px;
+  color: #8ED9FC;
+  background-color: #FFFFFF;
+}
+section.col-left section.notifications div.right span {
+  font-weight: bold;
+}
+section.col-left section.notifications div.right a {
+  margin-top: 5px;
+  color: #507485;
 }
 /* COL-RIGHT -> ROWS -> WRITING */
 section.col-right section.writing div.smile, section.col-right section.writing div.input-text, section.col-right section.writing div.audio {
