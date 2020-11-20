@@ -4,4 +4,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-/*  */
+/* GENERAL */
+body {
+  height: 100vh;
+  background: linear-gradient(to top, #DADBD3 85vh, #009688 15vh);
+}
