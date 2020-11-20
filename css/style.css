@@ -8,7 +8,6 @@
 .border {
   border: 1px solid black;
 }
-
 /* GENERAL */
 div.big-container {
   display: flex;
@@ -45,7 +44,10 @@ section.col-left section.notifications {
   background-color: #8ED9FC;
 }
 section.col-left section.search {
-  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: #FAFAFA;
 }
 section.col-left section.contacts {
@@ -66,6 +68,8 @@ section.col-right section.writing {
   flex-direction: row;
   background-color: #F3EEE9;
 }
+/* COL-LEFT -> ROWS -> USER */
+
 /* COL-LEFT -> ROWS -> NOTIFICATIONS */
 section.col-left section.notifications div.left, section.col-left section.notifications div.right {
   display: flex;
@@ -97,6 +101,34 @@ section.col-left section.notifications div.right a {
   margin-top: 5px;
   color: #507485;
 }
+/* COL-LEFT -> ROWS -> SEARCH */
+section.col-left section.search div.sub-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 35px;
+  margin: 5px auto;
+  width: 90%;
+  background-color: #FFFFFF;
+  border: 0.5px solid #F5F5F5;
+}
+section.col-left section.search div.sub-search i {
+  margin-left: 10px;
+  margin-right: 25px;
+  color: #B7B9BB;
+}
+section.col-left section.search div.sub-search input {
+  height: 35px;
+  width: 300px;
+  border: none;
+  outline: none !important;
+}
+/* COL-LEFT -> ROWS -> CONTACTS */
+
+/* COL-RIGHT -> ROWS -> CURRENT-CONTACT */
+
+/* COL-RIGHT -> ROWS -> CURRENT-CHAT */
+
 /* COL-RIGHT -> ROWS -> WRITING */
 section.col-right section.writing div.smile, section.col-right section.writing div.input-text, section.col-right section.writing div.audio {
   display: flex;
