@@ -16,7 +16,7 @@ div.big-container {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-width: 800px;
+  min-width: 1100px;
   background: linear-gradient(to top, #DADBD3 85%, #009688 15%);
   background-repeat: no-repeat;
 }
@@ -24,7 +24,7 @@ main.container {
   display: flex;
   flex-direction: row;
   width: 80vw;
-  min-width: 800px;
+  min-width: 1100px;
 }
 /* COLS */
 section.col-left {
@@ -75,23 +75,23 @@ section.col-left section.notifications div.left {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 20%;
 }
 section.col-left section.notifications div.right {
   flex-direction: column;
   justify-content: center;
-  width: 70%;
+  width: 80%;
 }
 section.col-left section.notifications div.left i {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 26px;
   border-radius: 50%;
   padding: 15px;
   color: #8ED9FC;
   background-color: #FFFFFF;
 }
 section.col-left section.notifications div.right span {
-  font-weight: bold;
+  font-weight: 600;
 }
 section.col-left section.notifications div.right a {
   margin-top: 5px;
@@ -112,15 +112,15 @@ section.col-right section.writing div.input-text {
   width: calc(100% - 140px);
 }
 section.col-right section.writing div.smile i, section.col-right section.writing div.audio i {
-  font-size: 30px;
+  font-size: 26px;
   color: #6A7376;
 }
 section.col-right section.writing div.smile i:hover, section.col-right section.writing div.audio i:hover {
   cursor: pointer;
 }
 section.col-right section.writing div.input-text input {
-  width: 100%;
   font-size: 20px;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: none;
