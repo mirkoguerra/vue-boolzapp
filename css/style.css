@@ -8,36 +8,7 @@
 .border {
   border: 1px solid black;
 }
-.h-45 {
-  height: 45px;
-}
-.h-70 {
-  height: 70px;
-}
-.h-90 {
-  height: 90px;
-}
-.background-lightgreen {
-  background-color: lightgreen;
-}
-.background-green {
-  background-color: green;
-}
-.background-lightblue {
-  background-color: lightblue;
-}
-.background-blue {
-  background-color: blue;
-}
-.background-yellow {
-  background-color: yellow;
-}
-.background-orange {
-  background-color: orange;
-}
-.background-red {
-  background-color: red;
-}
+
 /* GENERAL */
 div.big-container {
   display: flex;
@@ -63,10 +34,32 @@ section.col-right {
   width: 65%;
 }
 /* COL-LEFT -> ROWS */
+section.col-left section.user {
+  height: 70px;
+  background-color: #EAEAEA;
+}
+section.col-left section.notifications {
+  height: 90px;
+  background-color: #8ED9FC;
+}
+section.col-left section.search {
+  height: 45px;
+  background-color: #FAFAFA;
+}
 section.col-left section.contacts {
   height: calc(96vh - 205px);
+  background-color: #FFFFFF;
 }
 /* COL-RIGHT -> ROWS */
+section.col-right section.corrent-contact {
+  height: 70px;
+  background-color: #EAEAEA;
+}
 section.col-right section.corrent-chat {
   height: calc(96vh - 140px);
+  background-image: url("../img/mine.jpg");
+}
+section.col-right section.writing {
+  height: 70px;
+  background-color: #F3EEE9;
 }
