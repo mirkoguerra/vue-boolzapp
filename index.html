@@ -20,35 +20,38 @@
 
   </head>
   <body>
-    <!-- contenitore di tutto -->
-    <main class="container">
-      <!-- sezione che raccoglie tutta la colonna sinistra -->
-      <section class="col-left">
-        <!-- sottosezione relativa a nome utente, avatar utente, ... -->
-        <section class="user">
+    <!-- uso questo div big-container per evitare di dover lavorare direttamente sul body nel css -->
+    <div class="big-container">
+      <!-- contenitore di tutto -->
+      <main class="container border background-red">
+        <!-- sezione che raccoglie tutta la colonna sinistra -->
+        <section class="col-left">
+          <!-- sottosezione relativa a nome utente, avatar utente, ... -->
+          <section class="user">
+          </section>
+          <!-- sottosezione relativa alle notifiche -->
+          <section class="notifications">
+          </section>
+          <!-- sottosezione relativa alla ricerca dei contatti -->
+          <section class="search">
+          </section>
+          <!-- sottosezione relativa ai contatti -->
+          <section class="contacts">
+          </section>
         </section>
-        <!-- sottosezione relativa alle notifiche -->
-        <section class="notifications">
+        <!-- sezione che raccoglie tutta la colonna destra -->
+        <section class="col-right">
+          <!-- sottosezione relativa al contatto corrente -->
+          <section class="corrent-contact">
+          </section>
+          <!-- sottosezione relativa alla chat corrente -->
+          <section class="corrent-chat">
+          </section>
+          <!-- sottosezione relativa all'input di testo per la chat -->
+          <section class="writing">
+          </section>
         </section>
-        <!-- sottosezione relativa alla ricerca dei contatti -->
-        <section class="search">
-        </section>
-        <!-- sottosezione relativa ai contatti -->
-        <section class="contacts">
-        </section>
-      </section>
-      <!-- sezione che raccoglie tutta la colonna destra -->
-      <section class="col-right">
-        <!-- sottosezione relativa al contatto corrente -->
-        <section class="corrent-contact">
-        </section>
-        <!-- sottosezione relativa alla chat corrente -->
-        <section class="corrent-chat">
-        </section>
-        <!-- sottosezione relativa all'input di testo per la chat -->
-        <section class="writing">
-        </section>
-      </section>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
