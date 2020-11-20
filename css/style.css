@@ -11,8 +11,17 @@
 .background-red {
   background-color: red;
 }
-.h-100 {
-  height: 100px;
+.background-green {
+  background-color: green;
+}
+.background-yellow {
+  background-color: yellow;
+}
+.background-orange {
+  background-color: orange;
+}
+.background-pink {
+  background-color: pink;
 }
 /* GENERAL */
 div.big-container {
@@ -26,7 +35,27 @@ div.big-container {
   background-repeat: no-repeat;
 }
 main.container {
+  display: flex;
+  flex-direction: row;
   width: 80vw;
-  height: 96vh;
   min-width: 800px;
+}
+/* COLS */
+section.col-left, section.col-right {
+  height: 96vh;
+}
+section.col-left {
+  width: 35%;
+}
+section.col-right {
+  width: 65%;
+}
+/* COL-LEFT -> ROWS */
+
+/* COL-RIGHT -> ROWS */
+section.col-right section.corrent-contact , section.col-right section.writing {
+  height: 70px;
+}
+section.col-right section.corrent-chat {
+  height: calc(96vh - 140px);
 }
