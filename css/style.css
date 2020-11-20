@@ -32,6 +32,7 @@ section.col-left {
 }
 section.col-right {
   width: 65%;
+  border-left: 1px solid #D6D6D6;
 }
 /* COL-LEFT -> ROWS */
 section.col-left section.user {
@@ -60,6 +61,36 @@ section.col-right section.corrent-chat {
   background-image: url("../img/mine.jpg");
 }
 section.col-right section.writing {
-  height: 70px;
+  display: flex;
+  flex-direction: row;
   background-color: #F3EEE9;
+}
+/* COL-RIGHT -> ROWS -> WRITING */
+section.col-right section.writing div.smile, section.col-right section.writing div.input-text, section.col-right section.writing div.audio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+section.col-right section.writing div.smile,  section.col-right section.writing div.audio {
+  width: 70px;
+}
+section.col-right section.writing div.input-text {
+  width: calc(100% - 140px);
+}
+section.col-right section.writing div.smile i, section.col-right section.writing div.audio i {
+  font-size: 30px;
+  color: #6A7376;
+}
+section.col-right section.writing div.smile i:hover, section.col-right section.writing div.audio i:hover {
+  cursor: pointer;
+}
+section.col-right section.writing div.input-text input {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none !important;
 }
