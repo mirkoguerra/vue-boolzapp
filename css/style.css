@@ -25,6 +25,9 @@ main.container {
   width: 80vw;
   min-width: 1100px;
 }
+span {
+  font-size: 18px;
+}
 /* COLS */
 section.col-left {
   width: 35%;
@@ -35,7 +38,9 @@ section.col-right {
 }
 /* COL-LEFT -> ROWS */
 section.col-left section.user {
-  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #EAEAEA;
 }
 section.col-left section.notifications {
@@ -69,7 +74,28 @@ section.col-right section.writing {
   background-color: #F3EEE9;
 }
 /* COL-LEFT -> ROWS -> USER */
-
+section.col-left section.user div.sub-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+}
+section.col-left section.user div.icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 70px;
+}
+section.col-left section.user div.sub-user img {
+  height: 60px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+section.col-left section.user div.icons a i {
+  font-size: 26px;
+  color: #B1B1B1;
+  margin-right: 20px;
+}
 /* COL-LEFT -> ROWS -> NOTIFICATIONS */
 section.col-left section.notifications div.left, section.col-left section.notifications div.right {
   display: flex;
@@ -93,9 +119,6 @@ section.col-left section.notifications div.left i {
   padding: 15px;
   color: #8ED9FC;
   background-color: #FFFFFF;
-}
-section.col-left section.notifications div.right span {
-  font-weight: 600;
 }
 section.col-left section.notifications div.right a {
   margin-top: 5px;
@@ -143,12 +166,9 @@ section.col-right section.writing div.smile,  section.col-right section.writing 
 section.col-right section.writing div.input-text {
   width: calc(100% - 140px);
 }
-section.col-right section.writing div.smile i, section.col-right section.writing div.audio i {
+section.col-right section.writing div.smile a i, section.col-right section.writing div.audio a i {
   font-size: 26px;
   color: #6A7376;
-}
-section.col-right section.writing div.smile i:hover, section.col-right section.writing div.audio i:hover {
-  cursor: pointer;
 }
 section.col-right section.writing div.input-text input {
   font-size: 20px;

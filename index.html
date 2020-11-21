@@ -23,11 +23,22 @@
     <!-- uso questo div big-container per evitare di dover lavorare direttamente sul body nel css -->
     <div class="big-container">
       <!-- contenitore di tutto -->
-      <main class="container">
+      <main id="root" class="container">
         <!-- sezione che raccoglie tutta la colonna sinistra -->
         <section class="col-left">
-          <!-- sottosezione relativa a nome utente, avatar utente, ... -->
+          <!-- sottosezione relativa a nome utente, avatar utente, icone -->
           <section class="user">
+            <!-- div che conterrà nome e avatar dell'utente -->
+            <div class="sub-user">
+              <img v-bind:src="user.avatar" alt="avatar utente">
+              <span>{{user.name}}</span>
+            </div>
+            <!-- div che conterrà le icone alla destra dell'utente -->
+            <div class="icons">
+              <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+              <a href="#"><i class="fas fa-comment-alt"></i></a>
+              <a href="#"><i class="fas fa-circle-notch"></i></a>
+            </div>
           </section>
           <!-- sottosezione relativa alle notifiche -->
           <section class="notifications">
@@ -65,7 +76,7 @@
           <section class="writing">
             <!-- div che conterrà lo smlie -->
             <div class="smile">
-              <i class="far fa-smile"></i>
+              <a href="#"><i class="far fa-smile"></i></a>
             </div>
             <!-- div che conterrà l'input text -->
             <div class="input-text">
@@ -73,7 +84,7 @@
             </div>
             <!-- div che conterrà l'icona per gli audio -->
             <div class="audio">
-              <i class="fas fa-microphone"></i>
+              <a href="#"><i class="fas fa-microphone"></i></a>
             </div>
           </section>
         </section>
