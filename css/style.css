@@ -61,7 +61,9 @@ section.col-left section.contacts {
 }
 /* COL-RIGHT -> ROWS */
 section.col-right section.current-contact {
-  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #EAEAEA;
 }
 section.col-right section.current-chat {
@@ -149,7 +151,32 @@ section.col-left section.search div.sub-search input {
 /* COL-LEFT -> ROWS -> CONTACTS */
 
 /* COL-RIGHT -> ROWS -> CURRENT-CONTACT */
-
+section.col-right section.current-contact div.sub-current-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+}
+section.col-right section.current-contact div.icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 70px;
+}
+section.col-right section.current-contact div.sub-current-contact p {
+  font-size: 14px;
+  color: #B1B1B1;
+}
+section.col-right section.current-contact div.sub-current-contact img {
+  height: 60px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+section.col-right section.current-contact div.icons a i {
+  font-size: 26px;
+  color: #B1B1B1;
+  margin-right: 20px;
+}
 /* COL-RIGHT -> ROWS -> CURRENT-CHAT */
 
 /* COL-RIGHT -> ROWS -> WRITING */

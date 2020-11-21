@@ -68,6 +68,22 @@
         <section class="col-right">
           <!-- sottosezione relativa al contatto corrente -->
           <section class="current-contact">
+            <!-- div che conterrà avatar e nome del contatto con cui sto chattando -->
+            <div class="sub-current-contact">
+              <!-- SRC PROVVISORIO, SOLO PER SISTEMARE LA PARTE GRAFICA -->
+              <img v-bind:src="contacts[0].avatar" alt="avatar contatto">
+              <div>
+                <!-- CPNTENUTO DELLO SPAN PROVVISORIO, SOLO PER SISTEMARE LA PARTE GRAFICA -->
+                <span>{{contacts[0].name}}</span>
+                <p>Ultimo accesso oggi alle</p>
+              </div>
+            </div>
+            <!-- div che conterrà le icone sulla sinistra -->
+            <div class="icons">
+              <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+              <a href="#"><i class="fas fa-paperclip"></i></i></a>
+              <a href="#"><i class="fas fa-search"></i></i></a>
+            </div>
           </section>
           <!-- sottosezione relativa alla chat corrente -->
           <section class="current-chat">

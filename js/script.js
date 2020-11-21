@@ -11,35 +11,35 @@ const boolzappApp = new Vue ({
     contacts: [
       {
         name: "Silvio",
-        avatar: "img/avatar_.1jpg",
+        avatar: "img/avatar_1.jpg",
       },
       {
         name: "Giorgia",
-        avatar: "img/avatar_.2jpg",
+        avatar: "img/avatar_2.jpg",
       },
       {
         name: "Leonardo",
-        avatar: "img/avatar_.3jpg",
+        avatar: "img/avatar_3.jpg",
       },
       {
         name: "Matteo",
-        avatar: "img/avatar_.4jpg",
+        avatar: "img/avatar_4.jpg",
       },
       {
         name: "Tommaso",
-        avatar: "img/avatar_.5jpg",
+        avatar: "img/avatar_5.jpg",
       },
       {
         name: "Margherita",
-        avatar: "img/avatar_.6jpg",
+        avatar: "img/avatar_6.jpg",
       },
       {
         name: "Alessandro",
-        avatar: "img/avatar_.7jpg",
+        avatar: "img/avatar_7.jpg",
       },
       {
         name: "Alessio",
-        avatar: "img/avatar_.8jpg",
+        avatar: "img/avatar_8.jpg",
       }
     ]
   }
