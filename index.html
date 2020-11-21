@@ -64,7 +64,7 @@
           <section class="contacts">
             <ul>
               <!-- ogni list item conterrà un contatto -->
-              <li v-for="contact in contacts">
+              <li v-for="(contact, index) in contacts" @click="currentContactIndexChanging(index)">
                 <a href="#">
                   <img v-bind:src="contact.avatar" alt="avatar contatto">
                   <span>{{contact.name}}</span>
@@ -79,11 +79,11 @@
           <section class="current-contact">
             <!-- div che conterrà avatar e nome del contatto con cui sto chattando -->
             <div class="sub-current-contact">
-              <!-- SRC PROVVISORIO, SOLO PER SISTEMARE LA PARTE GRAFICA -->
-              <img v-bind:src="contacts[0].avatar" alt="avatar contatto">
+              <!-- l'immagine cambia in base al click dell'utente sui vari contatti -->
+              <img v-bind:src="contacts[currentContactIndex].avatar" alt="avatar contatto">
               <div>
-                <!-- CPNTENUTO DELLO SPAN PROVVISORIO, SOLO PER SISTEMARE LA PARTE GRAFICA -->
-                <span>{{contacts[0].name}}</span>
+                <!-- anche il nome, come l'immagine, cambia in risposta al click sui contatti -->
+                <span>{{contacts[currentContactIndex].name}}</span>
                 <p>Ultimo accesso oggi alle</p>
               </div>
             </div>

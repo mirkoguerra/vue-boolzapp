@@ -41,6 +41,12 @@ const boolzappApp = new Vue ({
         name: "Alessio",
         avatar: "img/avatar_8.jpg",
       }
-    ]
+    ],
+    currentContactIndex: 0,
+  },
+  methods: {
+    // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
+    currentContactIndexChanging: function(index) { this.currentContactIndex = index;
+    }
   }
 });
