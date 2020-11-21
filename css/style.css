@@ -58,6 +58,7 @@ section.col-left section.search {
 section.col-left section.contacts {
   height: calc(96vh - 205px);
   background-color: #FFFFFF;
+  overflow-y: auto;
 }
 /* COL-RIGHT -> ROWS */
 section.col-right section.current-contact {
@@ -149,7 +150,29 @@ section.col-left section.search div.sub-search input {
   outline: none !important;
 }
 /* COL-LEFT -> ROWS -> CONTACTS */
-
+section.col-left section.contacts ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+section.col-left section.contacts ul li {
+  border: 0.5px solid #F5F5F5;
+}
+section.col-left section.contacts ul li a {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.col-left section.contacts ul li a img {
+  height: 75px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+section.col-left section.contacts ul li a {
+  text-decoration: none;
+  color: black;
+}
 /* COL-RIGHT -> ROWS -> CURRENT-CONTACT */
 section.col-right section.current-contact div.sub-current-contact {
   display: flex;

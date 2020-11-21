@@ -62,6 +62,15 @@
           </section>
           <!-- sottosezione relativa ai contatti -->
           <section class="contacts">
+            <ul>
+              <!-- ogni list item conterrà un contatto -->
+              <li v-for="contact in contacts">
+                <a href="#">
+                  <img v-bind:src="contact.avatar" alt="avatar contatto">
+                  <span>{{contact.name}}</span>
+                </a>
+              </li>
+            </ul>
           </section>
         </section>
         <!-- sezione che raccoglie tutta la colonna destra -->

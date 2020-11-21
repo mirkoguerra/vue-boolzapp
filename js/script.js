@@ -30,7 +30,7 @@ const boolzappApp = new Vue ({
         avatar: "img/avatar_5.jpg",
       },
       {
-        name: "Margherita",
+        name: "Giulia",
         avatar: "img/avatar_6.jpg",
       },
       {
