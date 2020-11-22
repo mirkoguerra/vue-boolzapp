@@ -57,20 +57,43 @@
             <!-- questo div sub-search conterrà l'icona e l'input text -->
             <div class="sub-search">
               <i class="fas fa-search"></i>
-              <input type="text" name="" value="" autocomplete="off" placeholder="Cerca o inizia una nuova chat" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Cerca o inizia una nuova chat'">
+              <!-- scrivendo nell'input, filtro i contatti -->
+              <input type="text"
+              v-model="textSearch"
+              @input="filterContactsFunction"
+              autocomplete="off" placeholder="Cerca o inizia una nuova chat"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Cerca o inizia una nuova chat'">
             </div>
           </section>
           <!-- sottosezione relativa ai contatti -->
           <section class="contacts">
-            <ul>
-              <!-- ogni list item conterrà un contatto -->
-              <li v-for="(contact, index) in contacts" @click="currentContactIndexChanging(index)">
-                <a href="#">
-                  <img v-bind:src="contact.avatar" alt="avatar contatto">
-                  <span>{{contact.name}}</span>
-                </a>
-              </li>
-            </ul>
+            <!-- se non si sta cercando i contatti, ciclo sull'array contacts -->
+            <template v-if="textSearch==''">
+              <ul>
+                <!-- ogni list item conterrà un contatto -->
+                <li v-for="(contact, index) in contacts"
+                @click="currentContactIndexChanging(index)">
+                  <a href="#">
+                    <img v-bind:src="contact.avatar" alt="avatar contatto">
+                    <span>{{contact.name}}</span>
+                  </a>
+                </li>
+              </ul>
+            </template>
+            <!-- se si sta cercando i contatti, ciclo sull'array filteredContacts -->
+            <template v-else>
+              <ul>
+                <!-- ogni list item conterrà un contatto -->
+                <li v-for="(contact, index) in filteredContacts"
+                @click="currentContactIndexChanging(index)">
+                  <a href="#">
+                    <img v-bind:src="contact.avatar" alt="avatar contatto">
+                    <span>{{contact.name}}</span>
+                  </a>
+                </li>
+              </ul>
+            </template>
           </section>
         </section>
         <!-- sezione che raccoglie tutta la colonna destra -->
@@ -79,13 +102,26 @@
           <section class="current-contact">
             <!-- div che conterrà avatar e nome del contatto con cui sto chattando -->
             <div class="sub-current-contact">
-              <!-- l'immagine cambia in base al click dell'utente sui vari contatti -->
-              <img v-bind:src="contacts[currentContactIndex].avatar" alt="avatar contatto">
-              <div>
-                <!-- anche il nome, come l'immagine, cambia in risposta al click sui contatti -->
-                <span>{{contacts[currentContactIndex].name}}</span>
-                <p>Ultimo accesso oggi alle</p>
-              </div>
+              <!-- se non si sta cercando i contatti, ciclo sull'array contacts -->
+              <template v-if="textSearch==''">
+                <!-- l'immagine cambia in base al click dell'utente sui vari contatti -->
+                <img v-bind:src="contacts[currentContactIndex].avatar" alt="avatar contatto">
+                <div>
+                  <!-- anche il nome, come l'immagine, cambia in risposta al click sui contatti -->
+                  <span>{{contacts[currentContactIndex].name}}</span>
+                  <p>Ultimo accesso oggi alle</p>
+                </div>
+              </template>
+              <!-- se si sta cercando i contatti, ciclo sull'array filteredContacts -->
+              <template v-else>
+                <!-- l'immagine cambia in base al click dell'utente sui vari contatti -->
+                <img v-bind:src="filteredContacts[currentContactIndex].avatar" alt="avatar contatto">
+                <div>
+                  <!-- anche il nome, come l'immagine, cambia in risposta al click sui contatti -->
+                  <span>{{filteredContacts[currentContactIndex].name}}</span>
+                  <p>Ultimo accesso oggi alle</p>
+                </div>
+              </template>
             </div>
             <!-- div che conterrà le icone sulla sinistra -->
             <div class="icons">
@@ -105,7 +141,11 @@
             </div>
             <!-- div che conterrà l'input text -->
             <div class="input-text">
-              <input type="text" name="" value="" autocomplete="off" placeholder="Scrivi un messaggio" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Scrivi un messaggio'">
+              <input type="text"
+              autocomplete="off"
+              placeholder="Scrivi un messaggio"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Scrivi un messaggio'">
             </div>
             <!-- div che conterrà l'icona per gli audio -->
             <div class="audio">
