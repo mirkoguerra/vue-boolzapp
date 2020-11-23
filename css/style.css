@@ -8,6 +8,11 @@
 .border {
   border: 1px solid black;
 }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .current-contact-background {
   background-color: #E9EBEB;
 }
@@ -207,29 +212,41 @@ section.col-right section.current-contact div.icons a i {
   margin-right: 20px;
 }
 /* COL-RIGHT -> ROWS -> CURRENT-CHAT */
-section.col-right section.current-chat div.top-space {
-  height: 50px;
+section.col-right section.current-chat {
+  overflow-y: auto;
 }
 section.col-right section.current-chat div.sub-current-chat {
   width: 80%;
+  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 section.col-right section.current-chat div.sub-current-chat ul {
   list-style: none;
-  position: relative;
 }
 section.col-right section.current-chat div.sub-current-chat ul li {
-  font-size: 18px;
   width: 40%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 section.col-right section.current-chat div.sub-current-chat ul li.my-messages {
   background-color: #D5F9BA;
-  position: absolute;
-  right: 0;
+  float: right;
 }
 section.col-right section.current-chat div.sub-current-chat ul li.contact-messages {
   background-color: #FFFFFF;
+  clear: both;
+}
+section.col-right section.current-chat div.sub-current-chat ul li p {
+  font-size: 18px;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+section.col-right section.current-chat div.sub-current-chat ul li span {
+  font-size: 12px;
+  padding-right: 3px;
+  color: lightgrey;
+  float: right;
 }
 /* COL-RIGHT -> ROWS -> WRITING */
 section.col-right section.writing div.smile, section.col-right section.writing div.input-text, section.col-right section.writing div.audio {
