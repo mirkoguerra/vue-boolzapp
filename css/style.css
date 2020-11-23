@@ -232,6 +232,7 @@ section.col-right section.current-chat div.sub-current-chat ul li {
 section.col-right section.current-chat div.sub-current-chat ul li.my-message {
   background-color: #D5F9BA;
   float: right;
+  clear: both;
 }
 section.col-right section.current-chat div.sub-current-chat ul li.contact-message {
   background-color: #FFFFFF;
