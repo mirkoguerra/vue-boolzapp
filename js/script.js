@@ -12,42 +12,143 @@ const boolzappApp = new Vue ({
       {
         name: "Silvio",
         avatar: "img/avatar_1.jpg",
-        active: true
+        active: true,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Giorgia",
         avatar: "img/avatar_2.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Hai comprato la cioccolata",
+            data: "10/02/2020 16:48:00",
+            writedByMe: false
+          },
+          {
+            text: "No, fa male",
+            data: "10/02/2020 16:50:00",
+            writedByMe: true
+          },
+          {
+            text: "Hai ragione, sei molto saggio",
+            data: "10/02/2020 16:02:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Leonardo",
         avatar: "img/avatar_3.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Matteo",
         avatar: "img/avatar_4.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Tommaso",
         avatar: "img/avatar_5.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Giulia",
         avatar: "img/avatar_6.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Alessandro",
         avatar: "img/avatar_7.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       },
       {
         name: "Alessio",
         avatar: "img/avatar_8.jpg",
-        active: false
+        active: false,
+        oldMessages: [
+          {
+            text: "Ciao, come stai?",
+            data: "10/01/2020 15:48:00",
+            writedByMe: true
+          },
+          {
+            text: "Tutto bene, grazie",
+            data: "10/01/2020 15:50:00",
+            writedByMe: false
+          }
+        ]
       }
     ],
     // numero che rappresenta l'indice del contatto corrente

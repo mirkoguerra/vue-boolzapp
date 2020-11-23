@@ -229,11 +229,11 @@ section.col-right section.current-chat div.sub-current-chat ul li {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-section.col-right section.current-chat div.sub-current-chat ul li.my-messages {
+section.col-right section.current-chat div.sub-current-chat ul li.my-message {
   background-color: #D5F9BA;
   float: right;
 }
-section.col-right section.current-chat div.sub-current-chat ul li.contact-messages {
+section.col-right section.current-chat div.sub-current-chat ul li.contact-message {
   background-color: #FFFFFF;
   clear: both;
 }
