@@ -70,6 +70,7 @@
             <ul>
               <!-- ogni list item conterrà un contatto -->
               <li v-for="(contact, index) in contacts"
+              v-bind:class="contact.active ? 'current-contact-background' : ''"
               @click="currentContactIndexChanging(index)">
                 <a href="#">
                   <img v-bind:src="contact.avatar" alt="avatar contatto">
