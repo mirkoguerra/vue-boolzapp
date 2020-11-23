@@ -207,7 +207,30 @@ section.col-right section.current-contact div.icons a i {
   margin-right: 20px;
 }
 /* COL-RIGHT -> ROWS -> CURRENT-CHAT */
-
+section.col-right section.current-chat div.top-space {
+  height: 50px;
+}
+section.col-right section.current-chat div.sub-current-chat {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.col-right section.current-chat div.sub-current-chat ul {
+  list-style: none;
+  position: relative;
+}
+section.col-right section.current-chat div.sub-current-chat ul li {
+  font-size: 18px;
+  width: 40%;
+}
+section.col-right section.current-chat div.sub-current-chat ul li.my-messages {
+  background-color: #D5F9BA;
+  position: absolute;
+  right: 0;
+}
+section.col-right section.current-chat div.sub-current-chat ul li.contact-messages {
+  background-color: #FFFFFF;
+}
 /* COL-RIGHT -> ROWS -> WRITING */
 section.col-right section.writing div.smile, section.col-right section.writing div.input-text, section.col-right section.writing div.audio {
   display: flex;
