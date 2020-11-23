@@ -12,6 +12,7 @@ const boolzappApp = new Vue ({
       {
         name: "Silvio",
         avatar: "img/avatar_1.jpg",
+        lastAccess: "21/11/2020",
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -28,6 +29,7 @@ const boolzappApp = new Vue ({
       {
         name: "Giorgia",
         avatar: "img/avatar_2.jpg",
+        lastAccess: "23/11/2020",
         oldMessages: [
           {
             text: "Hai comprato la cioccolata?",
@@ -49,6 +51,7 @@ const boolzappApp = new Vue ({
       {
         name: "Leonardo",
         avatar: "img/avatar_3.jpg",
+        lastAccess: "22/11/2020",
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -80,6 +83,7 @@ const boolzappApp = new Vue ({
       {
         name: "Matteo",
         avatar: "img/avatar_4.jpg",
+        lastAccess: "23/11/2020",
         oldMessages: [
           {
             text: "Usciamo stasera?",
@@ -111,6 +115,7 @@ const boolzappApp = new Vue ({
       {
         name: "Tommaso",
         avatar: "img/avatar_5.jpg",
+        lastAccess: "20/11/2020",
         oldMessages: [
           {
             text: "Vorrei diventare un pasticcere",
@@ -127,6 +132,7 @@ const boolzappApp = new Vue ({
       {
         name: "Giulia",
         avatar: "img/avatar_6.jpg",
+        lastAccess: "23/11/2020",
         oldMessages: [
           {
             text: "Ciao Giulia, come stai?",
@@ -153,6 +159,7 @@ const boolzappApp = new Vue ({
       {
         name: "Alessandro",
         avatar: "img/avatar_7.jpg",
+        lastAccess: "18/11/2020",
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -179,6 +186,7 @@ const boolzappApp = new Vue ({
       {
         name: "Alessio",
         avatar: "img/avatar_8.jpg",
+        lastAccess: "19/11/2020",
         oldMessages: [
           {
             text: "Andiamo a fare due tiri al campetto?",
