@@ -44,20 +44,10 @@ const boolzappApp = new Vue ({
     ],
     // numero che rappresenta l'indice del contatto corrente
     currentContactIndex: 0,
-    // inizializzo come vuota la stringa corrispondente all'input inserito dall'utente per filtrare i contatti
-    textSearch: "",
-    // array vuoto che sarà riempito con i contatti filtrati in base a quanto viene inserito nel textSearch, ovvero nell'input text di ricerca contatti
-    filteredContacts: []
   },
   methods: {
     // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
     currentContactIndexChanging: function(index) { this.currentContactIndex = index;
     },
-    // funzione che fa entrare nell'array filteredContacts i contatti filtrati dell'array contacts
-    filterContactsFunction: function() {
-      this.filteredContacts = this.contacts.filter(
-        contact => contact.name.toUpperCase().includes(this.textSearch.toUpperCase())
-        );
-    }
   }
 });
