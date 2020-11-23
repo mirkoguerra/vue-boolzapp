@@ -153,7 +153,3 @@ const boolzappApp = new Vue ({
     }
   }
 });
-
-// this.contacts[this.currentContactIndex].active = false;
-
-// this.contacts[index].active = true;
