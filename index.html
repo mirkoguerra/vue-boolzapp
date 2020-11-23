@@ -70,7 +70,7 @@
             <ul>
               <!-- ogni list item conterrà un contatto -->
               <li v-for="(contact, index) in contacts"
-              v-bind:class="contact.active ? 'current-contact-background' : ''"
+              v-bind:class="(contact == contacts[currentContactIndex]) ? 'current-contact-background' : ''"
               @click="currentContactIndexChanging(index)">
                 <a href="#">
                   <img v-bind:src="contact.avatar" alt="avatar contatto">
@@ -106,10 +106,9 @@
             <!-- div per spaziare -->
             <div class="sub-current-chat">
               <!-- conterrà i list item, rappresentati dai messaggi della chat con il contatto corrente -->
-              <ul v-if="contacts.active"
-              class="clearfix">
+              <ul class="clearfix">
                 <!-- ogni list item corrisponde ad un messaggio della chat con il contatto corrente -->
-                <li v-for="message in oldMessages"
+                <li v-for="message in contacts[currentContactIndex].oldMessages"
                 v-bind:class="message.writedByMe ? 'my-message' : 'contact-message'"
                 class="clearfix">
                   <!-- testo del messaggio -->

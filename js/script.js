@@ -12,7 +12,6 @@ const boolzappApp = new Vue ({
       {
         name: "Silvio",
         avatar: "img/avatar_1.jpg",
-        active: true,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -29,7 +28,6 @@ const boolzappApp = new Vue ({
       {
         name: "Giorgia",
         avatar: "img/avatar_2.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Hai comprato la cioccolata",
@@ -51,7 +49,6 @@ const boolzappApp = new Vue ({
       {
         name: "Leonardo",
         avatar: "img/avatar_3.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -68,7 +65,6 @@ const boolzappApp = new Vue ({
       {
         name: "Matteo",
         avatar: "img/avatar_4.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -85,7 +81,6 @@ const boolzappApp = new Vue ({
       {
         name: "Tommaso",
         avatar: "img/avatar_5.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -102,7 +97,6 @@ const boolzappApp = new Vue ({
       {
         name: "Giulia",
         avatar: "img/avatar_6.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -119,7 +113,6 @@ const boolzappApp = new Vue ({
       {
         name: "Alessandro",
         avatar: "img/avatar_7.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -136,7 +129,6 @@ const boolzappApp = new Vue ({
       {
         name: "Alessio",
         avatar: "img/avatar_8.jpg",
-        active: false,
         oldMessages: [
           {
             text: "Ciao, come stai?",
@@ -157,9 +149,11 @@ const boolzappApp = new Vue ({
   methods: {
     // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
     currentContactIndexChanging: function(index) {
-      this.contacts[this.currentContactIndex].active = false;
       this.currentContactIndex = index;
-      this.contacts[index].active = true;
     }
   }
 });
+
+// this.contacts[this.currentContactIndex].active = false;
+
+// this.contacts[index].active = true;
