@@ -166,6 +166,9 @@ section.col-left section.contacts ul {
 section.col-left section.contacts ul li {
   border: 0.5px solid #F5F5F5;
 }
+section.col-left section.contacts ul li.invisible {
+  display: none;
+}
 section.col-left section.contacts ul li:hover {
   background-color: #F4F5F5;
 }

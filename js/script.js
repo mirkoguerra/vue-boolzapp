@@ -206,7 +206,9 @@ const boolzappApp = new Vue ({
     // contenuto dell'input text relativo al messaggio che sto scrivendo nella chat corrente
     textInput: "",
     // contenuto dell'input text relativo alla ricerca del contatto
-    textSearch: ""
+    textSearch: "",
+    //
+    visibility: [true, true, true, true, true, true, true, true]
   },
   methods: {
     // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
@@ -218,7 +220,6 @@ const boolzappApp = new Vue ({
       if (e.keyCode == 13) {
         let date = new Date();
         let myNewMessageDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-        let contactNewMessageDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()+3}`;
         this.contacts[this.currentContactIndex]["oldMessages"].push(
           {
             text: this.textInput,
@@ -227,16 +228,18 @@ const boolzappApp = new Vue ({
           }
         );
         this.textInput = "";
-        this.automaticMessage(this.contacts, this.currentContactIndex, contactNewMessageDate);
+        this.automaticMessage();
       }
     },
     // funzione che genera la risposta automatica
-    automaticMessage: function(contacts, index, data) {
-      setTimeout(function() {
-        contacts[index]["oldMessages"].push(
+    automaticMessage: function() {
+      setTimeout(() => {
+        let date = new Date();
+        let contactNewMessageDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        this.contacts[this.currentContactIndex]["oldMessages"].push(
           {
             text: "Questa risposta è stata generata automaticamente, e apparirà 3 secondi dopo che scrivi un messaggio",
-            data: data,
+            data: contactNewMessageDate,
             writedByMe: false
           }
         )
@@ -244,3 +247,16 @@ const boolzappApp = new Vue ({
     }
   }
 });
+
+// return this.contacts.filter(
+//   contact => contact.name.toUpperCase().includes(this.textSearch.toUpperCase())
+//   );
+
+// funzione che filtra l'array contacts
+// filteredContactsFunction: function() {
+//   for (let i = 0; i < this.contacts.length; i++) {
+//     if (!  this.contacts[i]["this.name"].toUpperCase().includes(this.textSearch.toUpperCase())) {
+//       this.visibility[i] = false;
+//     }
+//   }
+// }

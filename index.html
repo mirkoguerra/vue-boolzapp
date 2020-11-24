@@ -88,11 +88,11 @@
             <!-- div che conterrà avatar e nome del contatto con cui sto chattando -->
             <div class="sub-current-contact">
               <!-- l'immagine cambia in base al click dell'utente sui vari contatti -->
-              <img v-bind:src="contacts[currentContactIndex].avatar" alt="avatar contatto">
+              <img v-bind:src="contacts[currentContactIndex]['avatar']" alt="avatar contatto">
               <div>
                 <!-- anche il nome, come l'immagine, cambia in risposta al click sui contatti -->
-                <span>{{contacts[currentContactIndex].name}}</span>
-                <p>Ultimo accesso in data {{contacts[currentContactIndex].lastAccess}}</p>
+                <span>{{contacts[currentContactIndex]['name']}}</span>
+                <p>Ultimo accesso in data {{contacts[currentContactIndex]['lastAccess']}}</p>
               </div>
             </div>
             <!-- div che conterrà le icone sulla sinistra -->
@@ -109,7 +109,7 @@
               <!-- conterrà i list item, rappresentati dai messaggi della chat con il contatto corrente -->
               <ul class="clearfix">
                 <!-- ogni list item corrisponde ad un messaggio della chat con il contatto corrente -->
-                <li v-for="message in contacts[currentContactIndex].oldMessages"
+                <li v-for="message in contacts[currentContactIndex]['oldMessages']"
                 v-bind:class="message.writedByMe ? 'my-message' : 'contact-message'"
                 class="clearfix">
                   <!-- testo del messaggio -->
