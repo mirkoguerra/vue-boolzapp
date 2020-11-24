@@ -227,11 +227,11 @@ const boolzappApp = new Vue ({
           }
         );
         this.textInput = "";
-        this.respond(this.contacts, this.currentContactIndex, contactNewMessageDate);
+        this.automaticMessage(this.contacts, this.currentContactIndex, contactNewMessageDate);
       }
     },
     // funzione che genera la risposta automatica
-    respond: function(contacts, index, data) {
+    automaticMessage: function(contacts, index, data) {
       setTimeout(function() {
         contacts[index]["oldMessages"].push(
           {
