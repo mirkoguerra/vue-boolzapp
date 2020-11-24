@@ -204,7 +204,9 @@ const boolzappApp = new Vue ({
     // numero che rappresenta l'indice del contatto corrente
     currentContactIndex: 0,
     // contenuto dell'input text relativo al messaggio che sto scrivendo nella chat corrente
-    textInput: ""
+    textInput: "",
+    // contenuto dell'input text relativo alla ricerca del contatto
+    textSearch: ""
   },
   methods: {
     // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
@@ -214,15 +216,31 @@ const boolzappApp = new Vue ({
     // funzione relativa all'aggiunta del messaggio che sto scrivendo nell'input text della section writing; alla pressione dell'enter,il messaggio verrà aggiunto all'array oldMessages del contatto corrente
     myMessageAdd: function(e) {
       if (e.keyCode == 13) {
+        let date = new Date();
+        let myNewMessageDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        let contactNewMessageDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()+3}`;
         this.contacts[this.currentContactIndex]["oldMessages"].push(
           {
             text: this.textInput,
-            data: ,
+            data: myNewMessageDate,
             writedByMe: true
           }
         );
         this.textInput = "";
+        this.respond(this.contacts, this.currentContactIndex, contactNewMessageDate);
       }
+    },
+    // funzione che genera la risposta automatica
+    respond: function(contacts, index, data) {
+      setTimeout(function() {
+        contacts[index]["oldMessages"].push(
+          {
+            text: "Questa risposta è stata generata automaticamente, e apparirà 3 secondi dopo che scrivi un messaggio",
+            data: data,
+            writedByMe: false
+          }
+        )
+      }, 3000)
     }
   }
 });

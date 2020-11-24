@@ -59,6 +59,7 @@
               <i class="fas fa-search"></i>
               <!-- scrivendo nell'input, filtro i contatti -->
               <input type="text"
+              v-model="textSearch"
               autocomplete="off" placeholder="Cerca o inizia una nuova chat"
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Cerca o inizia una nuova chat'">
