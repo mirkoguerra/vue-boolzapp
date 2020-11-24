@@ -203,11 +203,26 @@ const boolzappApp = new Vue ({
     ],
     // numero che rappresenta l'indice del contatto corrente
     currentContactIndex: 0,
+    // contenuto dell'input text relativo al messaggio che sto scrivendo nella chat corrente
+    textInput: ""
   },
   methods: {
     // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
     currentContactIndexChanging: function(index) {
       this.currentContactIndex = index;
+    },
+    // funzione relativa all'aggiunta del messaggio che sto scrivendo nell'input text della section writing; alla pressione dell'enter,il messaggio verrà aggiunto all'array oldMessages del contatto corrente
+    myMessageAdd: function(e) {
+      if (e.keyCode == 13) {
+        this.contacts[this.currentContactIndex]["oldMessages"].push(
+          {
+            text: this.textInput,
+            data: ,
+            writedByMe: true
+          }
+        );
+        this.textInput = "";
+      }
     }
   }
 });

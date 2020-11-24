@@ -128,6 +128,8 @@
             <!-- div che conterrà l'input text -->
             <div class="input-text">
               <input type="text"
+              v-model="textInput"
+              @keyup="myMessageAdd"
               autocomplete="off"
               placeholder="Scrivi un messaggio"
               onfocus="this.placeholder = ''"
