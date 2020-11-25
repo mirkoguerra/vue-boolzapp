@@ -256,7 +256,7 @@ const boolzappApp = new Vue ({
       for (let i = 0; i < this.contacts.length; i++) {
         if (this.contacts[i]['name'].toUpperCase().includes(this.textSearch.toUpperCase())) {
           this.contacts[i]['visibility'] = 'visible';
-        } else if (!this.contacts[i]['name'].toUpperCase().includes(this.textSearch.toUpperCase())) {
+        } else {
           this.contacts[i]['visibility'] = 'invisible';
         }
       }
