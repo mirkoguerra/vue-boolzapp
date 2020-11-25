@@ -11,6 +11,7 @@ const boolzappApp = new Vue ({
     contacts: [
       {
         name: "Silvio",
+        visibility: "visible",
         avatar: "img/avatar_1.jpg",
         lastAccess: "21/11/2020",
         oldMessages: [
@@ -28,6 +29,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Giorgia",
+        visibility: "visible",
         avatar: "img/avatar_2.jpg",
         lastAccess: "23/11/2020",
         oldMessages: [
@@ -50,6 +52,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Leonardo",
+        visibility: "visible",
         avatar: "img/avatar_3.jpg",
         lastAccess: "22/11/2020",
         oldMessages: [
@@ -82,6 +85,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Matteo",
+        visibility: "visible",
         avatar: "img/avatar_4.jpg",
         lastAccess: "23/11/2020",
         oldMessages: [
@@ -114,6 +118,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Tommaso",
+        visibility: "visible",
         avatar: "img/avatar_5.jpg",
         lastAccess: "20/11/2020",
         oldMessages: [
@@ -131,6 +136,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Giulia",
+        visibility: "visible",
         avatar: "img/avatar_6.jpg",
         lastAccess: "23/11/2020",
         oldMessages: [
@@ -158,6 +164,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Alessandro",
+        visibility: "visible",
         avatar: "img/avatar_7.jpg",
         lastAccess: "18/11/2020",
         oldMessages: [
@@ -185,6 +192,7 @@ const boolzappApp = new Vue ({
       },
       {
         name: "Alessio",
+        visibility: "visible",
         avatar: "img/avatar_8.jpg",
         lastAccess: "19/11/2020",
         oldMessages: [
@@ -206,9 +214,7 @@ const boolzappApp = new Vue ({
     // contenuto dell'input text relativo al messaggio che sto scrivendo nella chat corrente
     textInput: "",
     // contenuto dell'input text relativo alla ricerca del contatto
-    textSearch: "",
-    //
-    visibility: [true, true, true, true, true, true, true, true]
+    textSearch: ""
   },
   methods: {
     // funzione che fa cambiare valore a currentContactIndex in relazione all'indice della list item che sarà cliccata
@@ -244,19 +250,17 @@ const boolzappApp = new Vue ({
           }
         )
       }, 3000)
-    }
+    },
+    // funzione che mi permette di filtrare i contatti
+    filter: function() {
+      const that = this;
+      this.contacts.forEach(function(contact) {
+        if (contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
+          contact.visibility = 'visible';
+        } else if (!contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
+          contact.visibility = 'invisible';
+        }
+      })
+    },
   }
 });
-
-// return this.contacts.filter(
-//   contact => contact.name.toUpperCase().includes(this.textSearch.toUpperCase())
-//   );
-
-// funzione che filtra l'array contacts
-// filteredContactsFunction: function() {
-//   for (let i = 0; i < this.contacts.length; i++) {
-//     if (!  this.contacts[i]["this.name"].toUpperCase().includes(this.textSearch.toUpperCase())) {
-//       this.visibility[i] = false;
-//     }
-//   }
-// }

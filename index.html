@@ -60,6 +60,8 @@
               <!-- scrivendo nell'input, filtro i contatti -->
               <input type="text"
               v-model="textSearch"
+              @input="filter"
+              @keyup.delete="filter"
               autocomplete="off" placeholder="Cerca o inizia una nuova chat"
               onfocus="this.placeholder = ''"
               onblur="this.placeholder = 'Cerca o inizia una nuova chat'">
@@ -71,7 +73,7 @@
             <ul>
               <!-- ogni list item conterrà un contatto -->
               <li v-for="(contact, index) in contacts"
-              v-bind:class="(contact == contacts[currentContactIndex]) ? 'current-contact-background' : ''"
+              v-bind:class="[(contact == contacts[currentContactIndex]) ? 'current-contact-background' : '', contact.visibility]"
               @click="currentContactIndexChanging(index)">
                 <a href="#">
                   <img v-bind:src="contact.avatar" alt="avatar contatto">
