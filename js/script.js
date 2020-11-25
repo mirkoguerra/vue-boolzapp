@@ -263,14 +263,3 @@ const boolzappApp = new Vue ({
     }
   }
 });
-
-// filter: function() {
-//   const that = this;
-//   this.contacts.forEach(function(contact) {
-//     if (contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
-//       contact.visibility = 'visible';
-//     } else if (!contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
-//       contact.visibility = 'invisible';
-//     }
-//   })
-// },
