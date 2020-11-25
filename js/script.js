@@ -253,14 +253,24 @@ const boolzappApp = new Vue ({
     },
     // funzione che mi permette di filtrare i contatti
     filter: function() {
-      const that = this;
-      this.contacts.forEach(function(contact) {
-        if (contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
-          contact.visibility = 'visible';
-        } else if (!contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
-          contact.visibility = 'invisible';
+      for (let i = 0; i < this.contacts.length; i++) {
+        if (this.contacts[i]['name'].toUpperCase().includes(this.textSearch.toUpperCase())) {
+          this.contacts[i]['visibility'] = 'visible';
+        } else if (!this.contacts[i]['name'].toUpperCase().includes(this.textSearch.toUpperCase())) {
+          this.contacts[i]['visibility'] = 'invisible';
         }
-      })
-    },
+      }
+    }
   }
 });
+
+// filter: function() {
+//   const that = this;
+//   this.contacts.forEach(function(contact) {
+//     if (contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
+//       contact.visibility = 'visible';
+//     } else if (!contact.name.toUpperCase().includes(that.textSearch.toUpperCase())) {
+//       contact.visibility = 'invisible';
+//     }
+//   })
+// },
