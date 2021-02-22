@@ -11,3 +11,5 @@ replica della versione web di WhatsApp;
 * i messaggi inviati e i messaggi generati automaticamente presentano l'effettiva data e ora d'invio
 
 ![](foto1.jpg)
+
+![](boolzapp.gif)
